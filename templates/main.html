@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSearch Crawler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="{% if results or message %}has-results{% else %}centered{% endif %}">
+
+    <div class="app-container">
+        <header class="header">
+            <h1 class="logo">Deep<span>Search</span></h1>
+            <p class="tagline">Enterprise-grade web crawler & indexer</p>
+        </header>
+
+        <main class="main-content">
+            <form method="POST" class="search-form" id="searchForm">
+                <div class="inputs-grid">
+                    <div class="input-group">
+                        <label for="crawlUrl">Target URL</label>
+                        <input type="url" name="url" id="crawlUrl" placeholder="https://example.com" autocomplete="off" value="{{ url_to_crawl }}">
+                    </div>
+                    <div class="input-group">
+                        <label for="searchQuery">Search Keyword</label>
+                        <input type="text" name="query" id="searchQuery" placeholder="What are you looking for?" required autocomplete="off" value="{{ query }}">
+                    </div>
+                </div>
+                <button type="submit" id="submitBtn" class="primary-btn">
+                    <span id="btnText">Analyze & Search</span>
+                    <div class="loader" id="loader" style="display: none;"></div>
+                </button>
+            </form>
+
+            {% if message %}
+            <div class="status-message">
+                <svg viewBox="0 0 24 24" fill="none" class="icon-success"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>{{ message }}</span>
+            </div>
+            {% endif %}
+
+            {% if request.method == 'POST' %}
+            <div class="results-container">
+                <div class="results-header-info">
+                    <h2 class="results-title">Search Results</h2>
+                    {% if query or url_to_crawl %}
+                    <div class="search-meta">
+                        {% if url_to_crawl %}<span>Target URL: <strong>{{ url_to_crawl }}</strong></span>{% endif %}
+                        {% if query %}<span>Keyword: <strong>{{ query }}</strong></span>{% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if results %}
+                    <div class="results-grid">
+                        {% for url, score in results %}
+                        <article class="result-card">
+                            <div class="result-header">
+                                <span class="badge">Match Score: {{ score }}</span>
+                            </div>
+                            <a href="{{ url }}" target="_blank" class="result-link">
+                                <h3>{{ url.split('/')[-1] or url }}</h3>
+                                <p class="url-path">{{ url }}</p>
+                            </a>
+                        </article>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="empty-state">
+                        <p>No targeted matches found on this domain. Try a different keyword or URL.</p>
+                    </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </main>
+    </div>
+
+    <script>
+        // Simple client-side loading state
+        document.getElementById('searchForm').addEventListener('submit', function() {
+            const btn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const loader = document.getElementById('loader');
+            
+            btn.classList.add('loading');
+            btnText.textContent = 'Processing...';
+            loader.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
