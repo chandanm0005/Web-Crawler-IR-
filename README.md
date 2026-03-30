@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Nexus%20DeepSearch&fontSize=60&fontColor=ffffff&desc=Next-Generation%20Web%20Crawler%20%26%20Indexer&descAlignY=70&descAlign=50" alt="Nexus DeepSearch Header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Nexus%20DeepSearch&fontSize=60&fontColor=ffffff&desc=Next-Generation%20Web%20Crawler%20%26%20Indexer&descAlignY=70&descAlign=50" alt="DeepSearch Header"/>
 
-# 🕸️ Nexus DeepSearch Crawler
+# DeepSearch Crawler
 
-*A lightning-fast, ultra-modern Python Web Crawler & Search Engine built for absolute precision.*
+
 
 [![Python Version](https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Flask Framework](https://img.shields.io/badge/Flask-2.0+-black?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
