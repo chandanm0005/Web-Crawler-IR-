@@ -29,7 +29,7 @@ Whether you're building an **Information Retrieval (IR)** project from scratch o
 
 ## 🚀 Live Demo
 
-[🔥 **Launch the Live Application Here** 🔥][(#)  ]
+[🔥 **Launch the Live Application Here** 🔥]
 (https://web-crawler-ir-1.onrender.com/)
 
 
@@ -40,7 +40,8 @@ Whether you're building an **Information Retrieval (IR)** project from scratch o
     <i>"A User Interface that feels like a premium enterprise product."</i>
   </blockquote>
   <img src="https://via.placeholder.com/800x450/0a0a0a/38bdf8?text=Placeholder:+Nexus+Crawler+UI+Screenshot" alt="App Screenshot" width="800" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"/>
-  <p><em>(Add your actual screenshot to your repository and update the URL link above to show off the frontend!)</em></p>
+  <p><em><img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/1642fb7e-b0d4-46df-b2d2-36e589b7db0d" />
+</em></p>
 </div>
 
 ---
