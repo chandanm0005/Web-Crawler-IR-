@@ -29,7 +29,7 @@ Whether you're building an **Information Retrieval (IR)** project from scratch o
 
 ## 🚀 Live Demo
 
-[🔥 **Launch the Live Application Here** 🔥]
+[**You can click on this-->**]
 (https://web-crawler-ir-1.onrender.com/)
 
 
