@@ -1,7 +1,7 @@
 <div align="center">
 
 
-# DeepSearch Crawler
+# Web Crawler
 
 
 
@@ -18,7 +18,7 @@
 
 ## ⚡ Overview & The Vision
 
-**Nexus DeepSearch** bridges the gap between raw backend web-scraping scripts and premium, user-first search experiences. By instantly parsing DOM elements, intelligently extracting core conversational content, and bypassing common bot-protection roadblocks (like SSL verification traps and default `User-Agent` blocks), Nexus serves as a robust indexing powerhouse.
+**DeepSearch** bridges the gap between raw backend web-scraping scripts and premium, user-first search experiences. By instantly parsing DOM elements, intelligently extracting core conversational content, and bypassing common bot-protection roadblocks (like SSL verification traps and default `User-Agent` blocks), Nexus serves as a robust indexing powerhouse.
 
 Gone are the days of terminal-only scripts. With a bespoke, dark-mode SaaS interface built cleanly on Vanilla CSS3, you can query massive domains and visualize the semantic relevance of any keyword on-the-fly.
 
