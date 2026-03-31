@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 import re
 import urllib3
 
-# Disable SSL warnings for unverified requests on local environments
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
